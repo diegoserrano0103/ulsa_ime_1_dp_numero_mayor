@@ -5,42 +5,42 @@
 ## 1. Descripción del problema (Fase 1)
 <!-- Explica con tus palabras qué hace tu programa y para qué serviría en la vida real. Máximo 4 líneas. -->
 
-_____
+_____este programa compara los 3 numeros que ingresamos y los compara para saber cual es mayor, esto puede servir para comparar no solo numeros tal vez sustancias y saber cual tiene mas cantidad de cierto elemento.
 
 ## 2. Entradas y salidas (Fase 1)
 <!-- Define cada entrada y cada salida, con su tipo de dato y su objetivo. -->
 
 **Entradas:**
-1. _____
-2. _____
-3. _____
+1. _____valor1
+2. _____valor2
+3. _____valor3
 
 **Salida:**
-1. _____
+1. _____resultado
 
 **¿Muestro el valor del mayor o cuál de los tres fue (primero, segundo o tercero)? ¿Por qué?**
-_____
+_____se muestra el valor mayor
 
 **¿Qué función de `utilerias.h` uso para leer los números? ¿Por qué esa y no la otra?**
-_____
+_____leerEntero para que sean numeroes enteros y no decimales
 
 ## 3. Restricciones e invariante (Fases 1 y 2)
 
 **Restricciones** (¿qué debe cumplirse?):
-- _____
+- _____que no sea menor a 0
 - _____
 
 **¿Hace falta validar el rango de los números (por ejemplo, rechazar el 0 o los negativos)? ¿Por qué?**
-_____
+_____si por que si no los numeros negativos van a ser contados
 
 **¿Qué hace mi programa cuando dos números son iguales y son los mayores? ¿Y cuando los tres son iguales?**
-_____
+_____los marca como que los dos o tres son los mayores y marca cual es el numero que es mayor
 
 **¿Quién detecta cada error?** (¿qué revisa la función de `utilerias.h` y qué reviso yo?)
-_____
+_____leerEntero
 
 **Invariante** (justo antes de mostrar el resultado, ¿qué es seguro sobre el valor que voy a mostrar?):
-_____
+_____que es el mayor
 
 ## 4. Casos resueltos a mano (Fase 1)
 
@@ -55,11 +55,11 @@ _____
 ## 5. Receta en pseudocódigo (Fase 2)
 <!-- Tu receta va en el archivo RECETA.md. Aquí solo responde las preguntas. -->
 
-**¿Probé mi receta a mano con mis 5 casos?** Sí / No
-**¿Tuve que corregirla? ¿Qué cambié?** _____
-**¿Cuántas versiones de mi receta escribí hasta la final?** _____
+**¿Probé mi receta a mano con mis 5 casos?** Sí 
+**¿Tuve que corregirla? ¿Qué cambié?** si, cambie codigo en los casos donde eran empates entre numeros
+**¿Cuántas versiones de mi receta escribí hasta la final?** 3
 **¿Se me ocurrió otra forma de resolver el problema? ¿Cuál? ¿Por qué elegí la que usé?**
-_____
+_____no
 
 ## 6. Cómo compilar y ejecutar (Fase 3)
 
@@ -71,7 +71,11 @@ g++ -Wall -Wextra -std=c++17 main.cpp -o numero_mayor
 ## 7. Ejemplo de ejecución (Fase 3)
 <!-- Pega aquí lo que muestra tu programa en pantalla con un caso de empate (por ejemplo 7, 7 y 3). -->
 
-```
+```Bienvenido, Ingrese 3 numeros para comparar
+Ingresa un valor3
+Ingresa un valor3
+Ingresa un valor77
+El valor 3 es el mayor (77)
 _____
 ```
 
@@ -87,15 +91,15 @@ _____
 | _____ | _____ |
 
 **¿Hubo algún paso de mi receta que me costó traducir a C++? ¿Cuál y por qué?**
-_____
+_____Si el paso de decir que 2 valores eran iguales y otro no
 
 ## 9. Experimentos (Fase 3)
 
 **Experimento A: ¿qué te dijo el compilador con `if (a > b > c)`? ¿Qué mostró el programa con 3, 2 y 1? ¿Por qué?**
-_____
+_____que el 3 es el numero mayor en mi caso el valor 1 por que esta ocupando el lugar 1
 
 **Experimento B: al cambiar `>=` por `>` (o al revés), ¿qué mostró el programa con 7, 7, 3 y con 5, 5, 5? ¿Por qué?**
-_____
+_____primero mostro 3 y en el segundo mostro 5, por que cuando se puso 2 valores iguales con >= se hace un false
 
 **Experimento C (opcional): con `if (a = b)`, ¿qué te dijo el compilador? ¿Qué le pasó al valor de `a`?**
 _____
@@ -148,21 +152,21 @@ _____
 _____
 
 **¿Qué fue más fácil para mí: la Práctica 3 (receta propia con un paso de ejemplo), la 4 (receta ajena) o esta (todo desde cero)? ¿Por qué?**
-_____
+_____comparar los 3 valores antes de pensar en los empates
 
 **¿Pensé en los empates antes de programar o los descubrí al probar?**
-_____
+_____al probar
 
 ## 14. Lista de verificación antes de entregar (Fase 5)
 
-- [ ] Llené las secciones 1 a 13 (no quedan `_____`)
-- [ ] Escribí mi receta completa en `RECETA.md` antes de programar
-- [ ] Cada bloque de `main.cpp` tiene su comentario `// Paso N`, de acuerdo con mi receta
-- [ ] Mi programa compila sin advertencias
-- [ ] Probé todos los casos de la tabla, incluidos los empates
-- [ ] Hice los Experimentos A y B y dejé el código correcto al terminar
-- [ ] No modifiqué `utilerias.h`
+- [ SI] Llené las secciones 1 a 13 (no quedan `_____`)
+- [si ] Escribí mi receta completa en `RECETA.md` antes de programar
+- [si ] Cada bloque de `main.cpp` tiene su comentario `// Paso N`, de acuerdo con mi receta
+- [si ] Mi programa compila sin advertencias
+- [si ] Probé todos los casos de la tabla, incluidos los empates
+- [si ] Hice los Experimentos A y B y dejé el código correcto al terminar
+- [si ] No modifiqué `utilerias.h`
 - [ ] Hice al menos 3 commits con mensajes claros
-- [ ] Hice `git push` y verifiqué mi fork en GitHub
-- [ ] Mi fork se llama `ulsa_ime_1_dp_numero_mayor` y el código está en `main.cpp`
-- [ ] Entregué el enlace de mi fork en Classroom
+- [si ] Hice `git push` y verifiqué mi fork en GitHub
+- [si ] Mi fork se llama `ulsa_ime_1_dp_numero_mayor` y el código está en `main.cpp`
+- [si ] Entregué el enlace de mi fork en Classroom
